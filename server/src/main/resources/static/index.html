@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Server Configuration</title>
+  <script>
+    function resetFields() {
+      document.getElementById("publishInterval").value = "1000";
+    }
+  </script>
+</head>
+<body>
+<h1>Server Configuration Page</h1>
+<p>Please enter the following configuration details:</p>
+<form action="/config" method="post">
+  <label for="maxQuestionValue"> Question Value:</label>
+  <input type="number" id="maxQuestionValue" name="maxQuestionValue" min="1" max="1000000" value="100">
+  <br><br>
+  <label for="publishInterval">Publish Interval:</label>
+  <input type="number" id="publishInterval" name="publishInterval" value="1000">
+  <br><br>
+  <input type="submit" value="Save Configuration" onclick="resetFields()">
+</form>
+</body>
+</html>
